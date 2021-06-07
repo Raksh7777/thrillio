@@ -7,6 +7,20 @@ public class User {
     private String firstName;
     private String lastName;
     private int gender;
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", gender=" + gender +
+                ", userType='" + userType + '\'' +
+                '}';
+    }
+
     private String userType;
 
     public String getPassword() {

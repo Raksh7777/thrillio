@@ -1,9 +1,23 @@
 package com.company.thrillio.entities;
 
+import java.util.Arrays;
+
 public class Movie extends Bookmark{
        private int releaseYear;
        private String[] cast;
-       private String[] directors;
+
+    @Override
+    public String toString() {
+        return "Movie{" +
+                "releaseYear=" + releaseYear +
+                ", cast=" + Arrays.toString(cast) +
+                ", directors=" + Arrays.toString(directors) +
+                ", genre='" + genre + '\'' +
+                ", imdbRating=" + imdbRating +
+                '}';
+    }
+
+    private String[] directors;
        private String genre;
        private double imdbRating;
 

@@ -1,9 +1,12 @@
 package com.company.managers;
 
+import com.company.thrillio.dao.UserDao;
 import com.company.thrillio.entities.User;
 
 public class UserManager {
     private static UserManager instance =new UserManager();
+    //invoke dao from here
+    private static UserDao dao=new UserDao();
     private UserManager(){ }
     public static UserManager getInstance(){
       return instance;
@@ -20,6 +23,9 @@ public class UserManager {
       return user;
 
 
+    }
+    public  User[] getUsers(){
+            return dao.getUsers();
     }
 
 }
