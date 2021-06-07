@@ -36,7 +36,18 @@ public class Launch {
             System.out.println(user);
         }
     }
+
+    private static void startBookmarking() {
+        System.out.println("\n 2.Bookmarking...");
+        for(User user:users){
+            View.bookmark(user,bookmarks);
+        }
+    }
+
     public static void main(String[] args){
         loadData();
+        startBookmarking();
     }
+
+
 }

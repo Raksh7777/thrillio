@@ -1,10 +1,7 @@
 package com.company.managers;
 
 import com.company.thrillio.dao.BookmarkDao;
-import com.company.thrillio.entities.Book;
-import com.company.thrillio.entities.Bookmark;
-import com.company.thrillio.entities.Movie;
-import com.company.thrillio.entities.WebLink;
+import com.company.thrillio.entities.*;
 
 public class BookmarkManager {
     private static BookmarkManager instance = new BookmarkManager();
@@ -51,6 +48,13 @@ public class BookmarkManager {
     }
     public Bookmark[][] getBookmarks(){
         return dao.getBookmarks();
+    }
+
+    public void saveUserBookmark(User user, Bookmark bookmark) {
+        UserBookmark userBookmark=new UserBookmark();
+        userBookmark.setUser(user);
+        userBookmark.setBookmark(bookmark);
+        dao.saveUserBookmark(userBookmark);
     }
 }
 
