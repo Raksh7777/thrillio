@@ -1,10 +1,12 @@
 package com.company.thrillio.entities;
 
+import com.company.constants.BookGenre;
+
 public class Book extends Bookmark{
     private int publication;
     private String publisher;
     private String[] authors;
-    private String genre;
+    private BookGenre genre;
     private double amazonRating;
 
     public int getPublication() {
@@ -31,11 +33,11 @@ public class Book extends Bookmark{
         this.authors = authors;
     }
 
-    public String getGenre() {
+    public BookGenre getGenre() {
         return genre;
     }
 
-    public void setGenre(String genre) {
+    public void setGenre(BookGenre genre) {
         this.genre = genre;
     }
 

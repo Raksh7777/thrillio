@@ -1,5 +1,6 @@
 package com.company.managers;
 
+import com.company.constants.BookGenre;
 import com.company.thrillio.dao.BookmarkDao;
 import com.company.thrillio.entities.*;
 
@@ -26,7 +27,7 @@ public class BookmarkManager {
         movie.setImdbRating(imdbRating);
         return movie;
     }
-    public Book createBook(long id,String title,int publicationYear,String publisher,String [] authors,String genre,double amazonRating){
+    public Book createBook(long id, String title, int publicationYear, String publisher, String [] authors, BookGenre genre, double amazonRating){
         Book book= new Book();
         book.setId(id);
         book.setTitle(title);
